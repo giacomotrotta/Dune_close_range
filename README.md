@@ -1,4 +1,5 @@
 Multispectral Indices Extraction Project
+
 This project consists of several scripts and files designed for the extraction of multispectral indices and the creation of masks for the selection of regions of interest (ROI). It is composed of three main files:
 
 1. community_ROI_selection.ijm (ImageJ Macro for ROI Mask Creation)
