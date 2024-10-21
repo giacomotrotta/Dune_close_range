@@ -1,7 +1,7 @@
 #Macro for ImageJ to estract single band value#
 dir1 = "Your path";
 
-blocco = newArray("A","B","C","D","E","F","G","H"); //
+blocco = newArray("A","B","C","D","E","F","G","H"); //in our experiment we had 8 block named with the letter and 8 treatment plus 1 external reference for each block so for example we had plot A1, A2,...A9, B1... and so on
 	
 	letter_for = newArray("A","B","C","D","E","F","G","H");
 	number_for = newArray("1","2","3","4","5","6","7","8","9");
@@ -23,7 +23,7 @@ blocco = newArray("A","B","C","D","E","F","G","H"); //
 	for (b=letter_for; b<8; b++) {
 		for (c=number_for; c<10; c++) {
 
-			list = getFileList(dir1 + blocco[b] + "/ROI/");
+			list = getFileList(dir1 + blocco[b] + "/ROI/"); //ROI in the floder selected
 			open(dir1 + blocco[b] + "/" + blocco[b] + "_" + c + "_stack.tif");
 			for (m = 1; m <= 5; m++) {
 				for (i = 0; i < list.length; i++) {
@@ -44,3 +44,4 @@ blocco = newArray("A","B","C","D","E","F","G","H"); //
 				
 		}
 		
+//NB this code need to be run after the previous code of imagej. You need to have the ROI created
