@@ -1,7 +1,7 @@
 Multispectral Indices Extraction Project
 This project consists of several scripts and files designed for the extraction of multispectral indices and the creation of masks for the selection of regions of interest (ROI). It is composed of three main files:
 
-1. ROI_selection.ijm (ImageJ Macro for ROI Mask Creation)
+1. community_ROI_selection.ijm (ImageJ Macro for ROI Mask Creation)
 Description: This macro is used to create ROI (Region of Interest) masks that will later be used in the extraction process.
 Functionality:
 Creates masks for selecting regions of interest (ROIs) based on study areas.
@@ -10,7 +10,7 @@ Usage:
 Run this macro in ImageJ to define ROI masks before running the data extraction macro.
 The created mask will be used later in the extraction process.
 
-2.Species_ROI_extraction.ijm
+2.Species_ROI_selection.ijm
 Description: This macro is used to create ROI (Region of Interest) masks for specific species that will later be used in the extraction process.
 Functionality:
 Creates masks for selecting regions of interest (ROIs) based on species.
@@ -47,11 +47,14 @@ openxlsx
 ImageJ to run .ijm macros
 
 General Instructions
-Create ROI masks: Use the ROI_selection.ijm macro in ImageJ to create ROI masks for different species.
+Create ROI masks: Use the community_ROI_selection.ijm macro in ImageJ to create ROI masks and Species_ROI_selection.ijm for different species.
 Extract band values: Use the extraction.ijm macro in ImageJ to extract band values using the defined ROIs.
 Calculate multispectral indices: Run the R script script_R_multispectral_indices.R to calculate the multispectral indices and save the results.
-Author
-Trotta Giacomo
 
+Author
+Trotta Giacomo and Marco Vuerich
+
+contact details:
+giacomo.trotta@uniud.it
 
 This README provides instructions and details for the correct usage of each file in your project.
