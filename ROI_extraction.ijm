@@ -2,7 +2,7 @@
 input = "your folder with images";
 blocco = newArray("A","B","C","D","E","F","G","H"); //in our experiment we had 8 block named with the letter and 8 treatment plus 1 external reference for each block so for example we had plot A1, A2,...A9, B1... and so on
 
-user_specified = getBoolean("What do you want to do?", "Automatic cycle", "Specify images");
+user_specified = getBoolean("What do you want to do?", "Automatic cycle", "Specify images"); //to choose a specific image or an automatic cycle
 if(user_specified==1){
 	
 	letter_for = newArray("A","B","C","D","E","F","G","H");
@@ -24,7 +24,7 @@ if(user_specified==1){
 	
 	for (b=letter_for; b<8; b++) {
 		for (c=number_for; c<10; c++) {
-					open(input + blocco[b] + "/" + blocco[b] + "_" + c + "_0002.tif");
+					open(input + blocco[b] + "/" + blocco[b] + "_" + c + "_0002.tif"); //depending on the type of images you are using. In this case the micasense 0002 (RED), 0001 (Green) and 0000(blue) are chooseto obtain an rgb image
 					open(input + blocco[b] + "/" + blocco[b] + "_" + c + "_0001.tif");
 					open(input + blocco[b] + "/" + blocco[b] + "_" + c + "_0000.tif");
 					getString("Plot", blocco[b] + "_" + c);
@@ -34,7 +34,7 @@ if(user_specified==1){
 					selectWindow("Stack");
 					close();
 					run("Brightness/Contrast...");
-					waitForUser("Set AUTO Brightness, adjust and apply");
+					waitForUser("Set AUTO Brightness, adjust and apply"); //to adjust the britghness and made the plant more visible
 					selectWindow("B&C");
 					run("Close");
 					plant=getBoolean("Plant are present?");
